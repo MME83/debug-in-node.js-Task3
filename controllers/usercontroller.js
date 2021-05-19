@@ -48,4 +48,4 @@ router.post('/signin', (req, res) => {
     })
 })
 
-module.exports = routers;
+module.exports = router;

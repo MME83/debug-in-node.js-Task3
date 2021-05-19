@@ -1,5 +1,5 @@
 var router = require('express').Router(); //var router = Router();
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 
 var User = require('../db').import('../models/user');
@@ -48,4 +48,4 @@ router.post('/signin', (req, res) => {
     })
 })
 
-module.exports = router;
+module.exports = routers;

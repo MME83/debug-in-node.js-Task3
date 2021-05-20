@@ -6,10 +6,13 @@ var game = require('./controllers/gamecontroller')
 
 
 db.sync();
-app.use(require('body-parser'));
+app.use(require('body-parser').json());
 app.use('/api/auth', user);
 app.use(require('./middleware/validate-session'))
 app.use('/api/game', game);
-app.listen(function() {
+
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, function() {
     console.log("App is listening on 4000");
 })
